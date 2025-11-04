@@ -1,0 +1,157 @@
+---
+import Layout from "@/layout/Layout.astro";
+import Section from "@/components/ui/Section.astro";
+import { ALIADOS } from "@/lib/const/aliados";
+
+const firstRow = ALIADOS.slice(0, 4);
+const secondRow = ALIADOS.slice(4);
+---
+
+<Layout>
+  <main>
+    <Section class="h-dvh relative flex flex-col justify-center">
+      <div class="space-y-6 w-full max-w-lg">
+        <header>
+          <h1
+            class="text-[clamp(var(--text-3xl),5vw,var(--text-6xl))] leading-8 md:leading-16 font-bold text-balance"
+          >
+            Creamos experiencias que impactan
+          </h1>
+        </header>
+        <p class="text-lg text-pretty">
+          Especializados en crear experiencias que impactan tanto a tus clientes
+          como a tus empleados, minimizando los riesgos digitales de tu empresa.
+        </p>
+        <footer class="flex gap-5">
+          <a
+            href="/"
+            class="block py-2 px-4 rounded-sm font-medium bg-verde-planta"
+            >Explorar soluciones</a
+          >
+          <a
+            href="/"
+            class="block py-2 px-4 rounded-sm font-medium border-2 border-negro"
+            >Probar demo</a
+          >
+        </footer>
+      </div>
+      <img
+        src="https://xkale.com/wp-content/uploads/2025/08/mapa-nosotros.png"
+        alt=""
+        class="absolute inset-0 -z-10 opacity-25 w-full h-full object-cover md:hidden"
+      />
+      <img
+        src="https://xkale.com/wp-content/uploads/2025/08/mapa-nosotros.png"
+        alt=""
+        class="absolute right-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 h-128 hidden md:block"
+      />
+    </Section>
+    <Section>
+      <div class="space-y-8">
+        <header class="text-center">
+          <h2
+            class="text-[clamp(var(--text-2xl),4vw,var(--text-4xl))] font-bold"
+          >
+            Nuestros servicios
+          </h2>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <a href="" class="group">
+            <article class="rounded-lg overflow-hidden space-y-4">
+              <img
+                src="https://xkale.com/wp-content/uploads/2025/03/CUSTOMER-EXPERIENCE-scaled-1.webp"
+                alt="Ciberseguridad"
+                loading="lazy"
+                class=""
+              />
+              <div class="space-y-2 text-negro text-shadow-xl">
+                <header>
+                  <h3
+                    class="text-[clamp(var(--text-xl),2vw,var(--text-2xl))] font-semibold"
+                  >
+                    Experiencia del Cliente
+                  </h3>
+                </header>
+                <p>Diseño y desarrollo enfocado en la satisfacción</p>
+                <footer>
+                  <span class="font-medium group-hover:underline">Ver más</span>
+                </footer>
+              </div>
+            </article>
+          </a>
+          <a href="" class="group">
+            <article class="rounded-lg overflow-hidden space-y-4">
+              <img
+                src="https://xkale.com/wp-content/uploads/2025/03/CIBERSEGURIDAD-scaled-1.webp"
+                alt="Ciberseguridad"
+                loading="lazy"
+                class=""
+              />
+              <div class="space-y-2 text-negro text-shadow-xl">
+                <header>
+                  <h3
+                    class="text-[clamp(var(--text-xl),2vw,var(--text-2xl))] font-semibold"
+                  >
+                    Ciberseguridad
+                  </h3>
+                </header>
+                <p>Protección de datos y sistemas ante amenazas digitales</p>
+                <footer>
+                  <span class="font-medium group-hover:underline">Ver más</span>
+                </footer>
+              </div>
+            </article>
+          </a>
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <div class="bg-amarillo-solar rounded-xl p-7 space-y-6">
+        <header class="text-center">
+          <h2
+            class="font-bold italic text-[clamp(var(--text-xl),4vw,var(--text-3xl))] text-balance"
+          >
+            En Xkale nos especializamos en crear experiencias que impacten tanto
+            a tus clientes como a tus empleados, minimizando los riesgos
+            digitales de tu empresa.
+          </h2>
+        </header>
+        <p class="text-pretty text-center text-lg">
+          Nuestra pasión es convertir tus objetivos en realidad a través
+          de conocimientos, innovación y tecnología.
+        </p>
+      </div>
+    </Section>
+    <Section>
+      <div class="space-y-8 max-w-4xl mx-auto">
+        <header class="text-center">
+          <h2
+            class="text-[clamp(var(--text-2xl),4vw,var(--text-4xl))] font-bold"
+          >
+            Nuestros partners
+          </h2>
+        </header>
+        <div class="space-y-8">
+          <div
+            class="flex flex-wrap justify-evenly gap-8 md:w-full md:flex-row md:justify-around md:gap-5"
+          >
+            {
+              firstRow.map(({ icon, id }) => (
+                <icon.name class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+              ))
+            }
+          </div>
+          <div
+            class="flex flex-wrap justify-evenly gap-10 md:w-full md:flex-row md:justify-around md:gap-5"
+          >
+            {
+              secondRow.map(({ icon, id }) => (
+                <icon.name class="h-6 md:h-8 w-auto grayscale hover:grayscale-0 transition-all" />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>

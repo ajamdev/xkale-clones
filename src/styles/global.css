@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-verde-planta: #6BD63D;
+  --color-blanco: #fcfcfc;
+  --color-negro: #040404;
+  --color-gris-escudo: #D1DBCC;
+
+  /* complementarios */
+  
+  --color-morado-real: #c980ed;
+  --color-azul-cielo: #338fff;
+  --color-amarillo-solar: #ebe080;
+}
+
