@@ -81,11 +81,15 @@ const secondRow = ALIADOS.slice(4);
             src="https://xkale.com/wp-content/uploads/2025/09/estrategia-2.jpg"
             alt="francisco soria"
             class="rounded-lg"
+            loading="lazy"
+            decoding="async"
           />
           <img
             src="https://xkale.com/wp-content/uploads/2025/09/xkale-img-2.jpg"
             alt=""
             class="rounded-lg"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="text-blanco space-y-6 relative">
@@ -173,6 +177,8 @@ const secondRow = ALIADOS.slice(4);
             src="https://xkale.com/wp-content/uploads/2025/09/xkale-img-5.jpg"
             alt=""
             class="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
@@ -182,7 +188,7 @@ const secondRow = ALIADOS.slice(4);
         {
           INFO.map(({title, description, className, icon})=>(
             <article class={`${className} p-6 space-y-6`}>
-              <header>
+              <header class="space-y-6">
                 <icon.name class="size-12 mx-auto" />
                 <h3 class="text-center text-balance font-bold text-xl md:text-2xl">{title}</h3>
               </header>
