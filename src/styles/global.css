@@ -13,3 +13,6 @@
   --color-amarillo-solar: #ebe080;
 }
 
+.mask-image {
+  mask-image: linear-gradient(to bottom, rgba(16, 25, 34, 1) 5%, rgba(16, 25, 34, 0) 100%);
+}
