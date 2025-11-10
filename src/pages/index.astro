@@ -180,9 +180,10 @@ const secondRow = ALIADOS.slice(4);
     <Section>
       <div class="grid grid-cols-1 md:grid-cols-3">
         {
-          INFO.map(({title, description, className})=>(
+          INFO.map(({title, description, className, icon})=>(
             <article class={`${className} p-6 space-y-6`}>
               <header>
+                <icon.name class="size-12 mx-auto" />
                 <h3 class="text-center text-balance font-bold text-xl md:text-2xl">{title}</h3>
               </header>
               <p class="text-center text-pretty">{description}</p>
