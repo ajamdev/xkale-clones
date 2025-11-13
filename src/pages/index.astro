@@ -5,6 +5,8 @@ import { ALIADOS } from "@/lib/const/aliados";
 import Xkale from "@/assets/xkale.svg";
 import Check from "@/assets/check.svg";
 import { INFO } from "@/lib/const/info";
+import Counter from "@/components/Counter.astro";
+import { contadorData } from "@/lib/const/contador";
 
 const firstRow = ALIADOS.slice(0, 4);
 const secondRow = ALIADOS.slice(4);
@@ -38,7 +40,7 @@ const secondRow = ALIADOS.slice(4);
       </div>
     </Section>
     <Section>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <div class="overflow-hidden">
           <img
             src="https://xkale.com/wp-content/uploads/2025/08/mapa-nosotros.png"
@@ -75,6 +77,17 @@ const secondRow = ALIADOS.slice(4);
             >
           </footer>
         </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+       { contadorData.map(({ icon, count, title, showPlus, showPorcentaje }) => (
+         <Counter
+           icon={icon}
+           count={count}
+           title={title}
+           showPlus={showPlus}
+           showPorcentaje={showPorcentaje}
+         />
+       ))}
       </div>
     </Section>
     <Section class="">
@@ -238,6 +251,6 @@ const secondRow = ALIADOS.slice(4);
         </div>
       </div>
     </Section>
-     <Section />
+    <Section />
   </main>
 </Layout>
