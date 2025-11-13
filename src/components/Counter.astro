@@ -10,7 +10,7 @@ interface Props {
 const { icon: Icon, count, title, showPlus = false, showPorcentaje = false } = Astro.props;
 ---
 
-<div class="border border-negro rounded-xl p-6 flex flex-col justify-center items-center space-y-5">
+<div class="border border-negro rounded-xl p-6 flex flex-col  items-center space-y-5">
   <Icon class="size-12"/>
   <div class="count">
     {showPlus && <span class="font-bold text-4xl">+</span> }
