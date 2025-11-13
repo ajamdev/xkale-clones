@@ -7,17 +7,25 @@ interface Props {
   showPorcentaje?: boolean;
 }
 
-const { icon: Icon, count, title, showPlus = false, showPorcentaje = false } = Astro.props;
+const {
+  icon: Icon,
+  count,
+  title,
+  showPlus = false,
+  showPorcentaje = false,
+} = Astro.props;
 ---
 
-<div class="border border-negro rounded-xl p-6 flex flex-col  items-center space-y-5">
-  <Icon class="size-12"/>
+<div
+  class="border border-negro rounded-xl p-6 flex flex-col items-center space-y-5"
+>
+  <Icon class="size-12" />
   <div class="count">
-    {showPlus && <span class="font-bold text-4xl">+</span> }
-    <span class="text-4xl font-bold number" data-target={showPorcentaje ? count / 100 : count}>{showPorcentaje ? (count / 100).toLocaleString() : count.toLocaleString()}</span>
+    {showPlus && <span class="font-bold text-4xl">+</span>}
+    <span class="text-4xl font-bold number" data-target={count}
+      >0</span
+    >
     {showPorcentaje && <span class="font-bold text-4xl">%</span>}
   </div>
   <h3 class="text-xl font-bold text-center">{title}</h3>
 </div>
-
-
