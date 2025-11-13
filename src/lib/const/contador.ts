@@ -13,7 +13,7 @@ export const contadorData: ContadorProps[] = [
   },
   {
     icon: Flecha,
-    count: 7333,
+    count: 73,
     title: "NPS 2024",
     showPlus: false,
     showPorcentaje: true,
