@@ -1,14 +1,14 @@
 ---
-import Footer from '@/components/ui/Footer.astro'
-import '../styles/global.css'
+import Footer from "@/components/ui/Footer.astro";
+import "../styles/global.css";
 
-interface prop{
+interface prop {
   title?: string;
   description?: string;
   img?: string;
 }
 
-const {title, description, img} = Astro.props as prop;
+const { title, description, img } = Astro.props as prop;
 ---
 
 <html lang="es-CO">
@@ -19,9 +19,10 @@ const {title, description, img} = Astro.props as prop;
     <meta name="generator" content={Astro.generator} />
     <title>{`Xkale | ${title}`}</title>
     <meta name="description" content={description} />
+    <script type="module" src="src/lib/js/main.js"></script>
   </head>
   <body>
     <slot />
-    <Footer/>
+    <Footer />
   </body>
 </html>
