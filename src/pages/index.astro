@@ -7,6 +7,7 @@ import Check from "@/assets/check.svg";
 import { INFO } from "@/lib/const/info";
 import Counter from "@/components/Counter.astro";
 import { contadorData } from "@/lib/const/contador";
+import CardInfo from "@/components/cardInfo.astro";
 
 const firstRow = ALIADOS.slice(0, 4);
 const secondRow = ALIADOS.slice(4);
@@ -69,25 +70,29 @@ const secondRow = ALIADOS.slice(4);
               con sus clientes.
             </p>
           </div>
-          <footer>
+          <footer class="w-full">
             <a
               href=""
-              class="font-bold bg-verde-planta px-4 py-2 rounded-lg md:hover:bg-negro md:hover:text-blanco transition-all duration-300"
+              class="font-bold bg-verde-planta px-4 py-2 rounded-lg md:hover:bg-negro md:hover:text-blanco transition-all duration-300 w-full"
               >Ver más</a
             >
           </footer>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-       { contadorData.map(({ icon, count, title, showPlus, showPorcentaje }) => (
-         <Counter
-           icon={icon}
-           count={count}
-           title={title}
-           showPlus={showPlus}
-           showPorcentaje={showPorcentaje}
-         />
-       ))}
+        {
+          contadorData.map(
+            ({ icon, count, title, showPlus, showPorcentaje }) => (
+              <Counter
+                icon={icon}
+                count={count}
+                title={title}
+                showPlus={showPlus}
+                showPorcentaje={showPorcentaje}
+              />
+            )
+          )
+        }
       </div>
     </Section>
     <Section class="">
@@ -218,6 +223,12 @@ const secondRow = ALIADOS.slice(4);
             </article>
           ))
         }
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 mt-8 gap-5 max-w-4xl mx-auto "
+      >
+        <CardInfo />
       </div>
     </Section>
     <Section>
