@@ -1,0 +1,16 @@
+---
+const { id, figureSrc, name } = Astro.props;
+---
+
+<a href="" >
+  <article id={id} class="overflow-hidden rounded-xl group relative w-full h-80 p-6 flex flex-col justify-end">
+    <img
+      src={figureSrc}
+      alt={name}
+      loading="eager"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+    />
+    <h3 class="relative font-bold text-blanco text-xl ">{name}</h3>
+  </article>
+</a>
