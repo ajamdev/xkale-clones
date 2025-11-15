@@ -11,6 +11,9 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
       ]
     },
     "jsx": "react-jsx",
