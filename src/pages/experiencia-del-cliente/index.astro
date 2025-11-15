@@ -1,0 +1,58 @@
+---
+import Layout from "@/layout/Layout.astro";
+import Hero from "./experiencia-del-cliente/Hero.astro";
+import Section from "@/components/ui/Section.astro";
+import OurExperience from "./experiencia-del-cliente/OurExperience.astro";
+---
+
+<Layout>
+  <main>
+    <Hero />
+    <Section class="bg-blanco">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <img
+            src="https://xkale.com/wp-content/uploads/2025/07/tips.jpg"
+            alt=""
+            class="mb-5 rounded-xl -rotate-2 hover:rotate-0 duration-300"
+          />
+          <p class="mb-4 text-pretty">
+            Con un enfoque consultivo, analizamos tu contexto, tus desafíos y
+            tus objetivos de negocio para diseñar una hoja de ruta que optimice
+            tu eficiencia operativa, automatice procesos y eleve la experiencia
+            de tus clientes
+          </p>
+          <p class="text-pretty">
+            Integramos Inteligencia Artificial en tus canales de
+            contactabilidad, transformándolos en habilitadores estratégicos que
+            incrementan la productividad, fortalecen la cercanía y permiten un
+            crecimiento sostenido en la relación con tus clientes
+          </p>
+        </div>
+        <div>
+          <header class="mb-5">
+            <h2 class="font-bold text-2xl md:text-3xl text-balance">El nuevo reto de las organizaciones orientadas al cliente</h2>
+          </header>
+          <p class="mb-4 text-pretty">
+            Hoy, la contactabilidad se ha convertido en uno de los principales
+            desafíos para las empresas que buscan fortalecer su relación con sus
+            clientes. Los cambios en los hábitos de consumo, los filtros de
+            comunicación y la falta de personalización han disminuido la
+            efectividad de los esfuerzos de contacto. Lo vemos en equipos que
+            destinan recursos sin lograr conexiones reales y en campañas con
+            bajo retorno que reflejan esta realidad.
+          </p>
+          <p class="text-pretty mb-5 font-bold">
+            Recuperar la capacidad de conectar es una prioridad estratégica para
+            mejorar la eficiencia, la conversión y la confianza en cada
+            interacción.
+          </p>
+          <footer>
+            <a href="#" class="font-bold bg-negro hover:bg-verde-planta text-blanco hover:text-negro duration-300 px-4 py-2 rounded-xl">Habla con un experto</a>
+          </footer>
+        </div>
+      </div>
+    </Section>
+    <OurExperience />
+  </main>
+</Layout>
